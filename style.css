@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .5s;
+}
+/* nav */
+.navbar-brand {
+  color: #fff;
+  font-weight: 700;
+}
+.bg{
+  background: transparent;
+  transition: all .2s;
+}
+.bg.scrolled{
+  background: #4dc47d;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #fff;
+
+  font-weight: 500;
+}
+.navbar-expand-lg .navbar-nav .nav-link::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  display: block;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+/* home--- */
+.mid {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.mid video {
+ position: absolute;
+ right: 0;
+ bottom: 0;
+ min-width: 100%;
+ min-height: 100%;
+ width: 100vh;
+ z-index: -100;
+ background-position: center;
+ background-size: cover;
+ object-fit: cover;
+}
+.mid .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.home-text {
+  z-index: 99;
+}
+.mid h1 {
+  font-size: 6vw;
+  line-height: 1.2em;
+}
+.mid p {
+  color: rgba(250, 250, 250, 0.7);
+}
+/* button */
+.section-btn{
+    margin-top: 32px 0 0 0;
+    padding: 0;
+}
+.section-btn a{
+    color: #fff;
+    font-weight: normal;
+    line-height: 45px;
+    perspective: 1000px;
+    text-decoration: none;
+}
+.section-btn a span{
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    padding: 0 27px;
+    background-color: #4dc47d;
+    transition: transform .3s;
+    border-radius: 1px;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+}
+.section-btn a span::before{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background: #000;
+    padding: 2px 27px;
+    transition: background 0.3s;
+    transform: rotateX(-90deg);
+    content: attr(data-hover);
+    transform-origin: 50% 0;
+
+}
+.section-btn a:hover span,
+.section-btn a:focus span{
+    transform: rotateX(90deg) translateY(-22px);
+}
+/* about */
+.about .container .row .about-text h5{
+    letter-spacing: 1rem;
+    font-weight: 500;
+}
+.about .container .row .about-text h3{
+   color: #777;
+}
+/* project */
+.project .row .project-item .img-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+.project .row .project-item:hover .img-overlay{
+  opacity: 1;
+}
+.project .row .project-item:hover img{
+  transform: scale(1.1);
+}
+.project .row .project-item img{
+  transition: all .5s ease-in-out;
+}
+.project .row .project-item{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 25px;
+  padding: 0;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+
+}
+.project .row .project-item .project-info{
+  padding: 12em 0;
+}
+/* team. */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+
+}
+.text h6 span{
+  font-weight: 600;
+}
+/* contact. */
+.contact{
+  background-image: url(./images/contact-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
